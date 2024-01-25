@@ -1,0 +1,64 @@
+<h1>Playground Angular</h1>
+
+<h3>Section 3 Directive________________________________</h3>
+<!-- Exo => directive qd entre dans p change de color qd ressort redevient transparent ... -->
+<p highlight highlight_Entrer="orange" highlight_Sortir="pink">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut minus id fuga,
+  reiciendis non cum vel corrupti iure? Animi, natus. Consequuntur enim,
+  doloribus minima obcaecati cumque architecto. Consequuntur, similique sit!
+</p>
+
+<p highlight>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos est iste
+  qui fuga. Iusto architecto vero odit similique quo odio fuga assumenda saepe
+  vitae. Eius.
+</p>
+
+<h4>27. Exo 1 Directive _________________________________</h4>
+<!-- Exo => on ne veut pas que le lien a s'ouvre -->
+<div>
+  <a no-open href="https://google.com" target="_blank">Google</a>
+</div>
+
+<h4>29. Exo 2 Directive _________________________________</h4>
+<!-- Exo => On veut que qd clic sur le lien popup de confirmation si click non le lien ne s'ouvre pas -->
+<div>
+  <a
+    confirm
+    confirm-message="Es tu sur de vouloir y aller ?"
+    href="https://twitter.com"
+    target="_blank"
+    >Twitter</a
+  >
+</div>
+
+<h3>Section 4 Composant_________________________________</h3>
+<!-- Les Compossants on specialement été conçu pour injecter du HTML grace à template -->
+<div
+  class="section"
+  user-profile
+  [employee]="true"
+  first-name="Karl"
+  last-name="PeterAllawi"
+  job="Informaticien"
+></div>
+<div
+  class="section"
+  user-profile
+  first-name="Didier"
+  last-name="Naccache"
+  job="President"
+  [employee]="true"
+></div>
+<div
+  class="section"
+  user-profile
+  first-name="Danielle"
+  last-name="Tordl"
+  job="Retraite"
+  [employee]="false"
+></div>
+
+<h4>47. Exo 1 Component _________________________________</h4>
+<counter [intital-value]="5" [step]="5"></counter>
+<!-- <div counter [intital-value]="5" [step]="5"></div> -->
