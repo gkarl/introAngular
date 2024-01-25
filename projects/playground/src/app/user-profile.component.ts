@@ -28,11 +28,14 @@ import { Component, Directive, ElementRef, Input } from '@angular/core';
         <!-- Event filter => keydown.enter qd on appuie sur la touche Ex Enter fait qqc -->
         <input
           (keydown.enter)="onFrappeAuClavier($event)"
+          #prenom
           type="text"
           placeholder="Nouveau Prénom"
         />
+        <!-- <button (click)="changerPrenom(prenom.value)" )>Changer Prenom</button> -->
       </strong>
     </p>
+
     <hr />`,
   styles: [
     `
@@ -85,5 +88,10 @@ export class UserProfileComponent {
     console.log('La touche Enter a été préssè');
     // nous permet de recupérer le texte entrè dans input et de valoriser l'attribut firstName qui va modifier son affichage sur le template
     this.firstName = (event.target as HTMLInputElement).value;
+  }
+
+  // Méthode pour changer l'affichage du prenom avec ce qui est entré dans input texte le button qui l'utilise à été comment
+  changerPrenom(prenom: string) {
+    this.firstName = prenom;
   }
 }
